@@ -1,0 +1,4 @@
+('add', 6)
+('sub', -4)
+('multiplication', 6)
+('division', 0.16666666666666666)
