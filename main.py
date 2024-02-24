@@ -43,14 +43,17 @@ def main():
                         print(f'student id: {d}: {data[d]}')
                 case 6:
                     try:
-                        student = Student('100')
+                        student_id = input('please enter student id: ')
+                        student = Student(student_id)
                         student.check_status()
                         if student.status == False:
                             raise StatusGradeError()
+                        
+                        student.give_grade()
+                        student.update()                        
                     except StatusGradeError as sge:
                         print(sge)
-                    else:
-                        print('update grade in file')
+                   
                     
                 
                 case -1:
