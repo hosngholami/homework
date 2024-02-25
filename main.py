@@ -38,6 +38,13 @@ def main():
     print('if you can saved file, you should write to file')
 
     print('-------------------------')
+    print('#### Condition ##### ')
+    print("if student avg lower 12, can't take a lecture ")
+    print("proffesor can't take lecture biger 3 ")
+
+    print('---------------------------------')
+
+
     for key, value in opration.items():
         print(f'{value} -> {key}')
 
