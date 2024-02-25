@@ -1,8 +1,8 @@
 from hossein_gholami_hw5.error_message.str_input_error import StrInputError
 from hossein_gholami_hw5.error_message.exist_error import ExistError
 from hossein_gholami_hw5.src.read_file import read_file
-def get_lecture():
-    books = read_file('/hossein_gholami_hw5/data/book.json')
+def insert_lecture():
+    books = read_file('/hossein_gholami_hw5/data/lecture.json')
     print('enter -1 for exit')
     while True:
         try:

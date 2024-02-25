@@ -1,1 +1,1 @@
-{"100": {"name": "hossein", "family": "gholami", "grade": {"101": "-1", "102": "-1", "103": "102", "104": "105"}, "status": true}, "101": {"name": "ali", "family": "ahmadi", "grade": {"101": "102", "103": "104", "100": "20", "104": "21"}, "status": true}}
+{"101": {"name": "hasan", "family": "hasani", "grade": {"101": -1, "102": -1}}, "100": {"name": "hossein", "family": "gholami", "grade": {}}}

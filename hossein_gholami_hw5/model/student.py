@@ -1,7 +1,8 @@
 from hossein_gholami_hw5.model.person  import Person
 from hossein_gholami_hw5.src.load_student import load_student
-from hossein_gholami_hw5.src.give_grade import give_grade
+from hossein_gholami_hw5.src.pick_lecture import pick_lecture
 from hossein_gholami_hw5.src.write import write_file
+from hossein_gholami_hw5.src.grade_lecture import grade_lecture
 import json
 class Student(Person):
     def __init__(self, student_id):
@@ -25,14 +26,17 @@ class Student(Person):
     def check_status(self):
         try:
             sum = 0
-            count = len(self.grade)
-            for item in self.grade:
-                sum += int(self.grade[item])
+            count = 0
+            for key, value in self.grade.items():
+                if value != '-1':
+                    sum += float(value)
+                    count += 1
             if (sum / count) < 12:
                 self.status = False
-                print(self.status)
         except ZeroDivisionError as ze:
             self.status = True
+        except AttributeError as ab:
+            print('plase take lecture')
             
       
     def update(self):
@@ -43,9 +47,10 @@ class Student(Person):
         write_file(file_name='/hossein_gholami_hw5/data/student.json', file=json.dumps(student))
 
 
-    def give_grade(self):
-         list_grade = give_grade()
-         for key, value in list_grade.items():
+    def pick_lecture(self):
+         list_lecture = pick_lecture()
+         list_lecture = grade_lecture(list_lecture)
+         for key, value in list_lecture.items():
                 self.grade[key] =  value
 
 
